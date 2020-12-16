@@ -6,16 +6,22 @@ const overlay = document.querySelector('.overlay');
 
 /* Looping through images */
 let attribute = displayedImage.getAttribute("src");
-
+for(let i = 0; i < 6; i++){
+  let image = 'images/pic'+ toString(i)+ '.jpg' ;
+  document.querySelector('.displayed-img').src = image;
+}
 
 const newImage = document.createElement('img');
 newImage.setAttribute('src', xxx);
 thumbBar.appendChild(newImage);
-alert("Hello! I am an alert box!!");
+
 /* Wiring up the Darken/Lighten button */
 
 
 //testing code
 function myFunction() {
-    document.querySelector('.displayed-img').src = 'images/pic2.jpg';
+  for(let i = 1; i < 6; i++){
+    let image = 'images/pic'+ i+ '.jpg' ;
+    document.querySelector('.displayed-img').src = image;
+  }
   }
