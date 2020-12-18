@@ -4,6 +4,7 @@ const thumbBar = document.querySelector('.thumb-bar');
 const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
+
 /* Looping through images */
 window.addEventListener('load', (event) => {
   for(let i = 1; i < 6; i++){
