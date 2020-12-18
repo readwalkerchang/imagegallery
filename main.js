@@ -14,21 +14,28 @@ function loopingImg(){
 
 function clickImg(){
   function myFunction(){
-    var attribute = this.getAttribute("src");
+    var attribute = this.getAttribute('src');
     let displayedImage = document.querySelector('.displayed-img');
     displayedImage.setAttribute('src', attribute);
   }
-  var elements = document.querySelectorAll("img");
+  let elements = document.querySelectorAll('img');
   Array.from(elements).forEach(function(element) {
     element.addEventListener('click', myFunction);
   });
 }
 
+function darkenImg(){
+  let buttonNode = document.querySelector('.dark');
+  buttonNode.addEventListener('click', ()=>{
+    alert("Hello");
+  });
+}
 
-
+//As using load event, make sure every expressions are run inside the eventlistener
 window.addEventListener('load', (event) => {
-  loopingImg()
-  clickImg()
+  loopingImg();
+  clickImg();
+  darkenImg();
 });
 
 
@@ -37,7 +44,7 @@ window.addEventListener('load', (event) => {
 /* Wiring up the Darken/Lighten button */
 
 
-//testing code
+//testing code below
 function myFunction() {
 
   }
