@@ -28,6 +28,7 @@ function clickImg(){
 function darkenImg(){
   let buttonNode = document.querySelector('.dark');
   let overlay = document.querySelector('.overlay');
+  
   buttonNode.addEventListener('click', ()=>{
     if (buttonNode.getAttribute('class','dark')==='dark'){
       overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
