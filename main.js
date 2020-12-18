@@ -13,14 +13,14 @@ function loopingImg(){
 // If you have ES6 support you can replace your last line with:
 
 function clickImg(){
-  function myFunction(){
-    var attribute = this.getAttribute('src'); //this points to element
+  SetImgSrc = function(){
+    let attribute = this.getAttribute('src'); //this points to element
     let displayedImage = document.querySelector('.displayed-img');
     displayedImage.setAttribute('src', attribute);
   }
   let elements = document.querySelectorAll('img');
   Array.from(elements).forEach(function(element) {
-    element.addEventListener('click', myFunction);
+    element.addEventListener('click', SetImgSrc);
   });
 }
 
@@ -49,11 +49,6 @@ window.addEventListener('load', (event) => {
   clickImg();
   darkenImg();
 });
-
-
-
-
-
 
 
 //testing code below
