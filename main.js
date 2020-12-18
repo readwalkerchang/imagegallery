@@ -14,7 +14,7 @@ function loopingImg(){
 
 function clickImg(){
   function myFunction(){
-    var attribute = this.getAttribute('src');
+    var attribute = this.getAttribute('src'); //this points to element
     let displayedImage = document.querySelector('.displayed-img');
     displayedImage.setAttribute('src', attribute);
   }
@@ -24,10 +24,22 @@ function clickImg(){
   });
 }
 
+/* Wiring up the Darken/Lighten button */
 function darkenImg(){
   let buttonNode = document.querySelector('.dark');
+  let overlay = document.querySelector('.overlay');
   buttonNode.addEventListener('click', ()=>{
-    alert("Hello");
+    if (buttonNode.getAttribute('class','dark')==='dark'){
+      overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
+      buttonNode.setAttribute('class','light');
+      buttonNode.textContent = 'lighten';
+    }
+    else{
+      buttonNode.setAttribute('class','dark');
+      overlay.style.backgroundColor = 'rgba(0,0,0,0)';
+      buttonNode.textContent = 'darken';
+    }
+    
   });
 }
 
@@ -41,10 +53,7 @@ window.addEventListener('load', (event) => {
 
 
 
-/* Wiring up the Darken/Lighten button */
+
 
 
 //testing code below
-function myFunction() {
-
-  }
